@@ -63,7 +63,7 @@ async function keyboardPress(e) {
         activeElement.isContentEditable
     );
 
-    if (e.code === 'KeyN' && !e.altKey && !e.metaKey && !isEditable) {
+    if (e.code === 'KeyN' && !e.ctrlKey && !e.altKey && !e.metaKey && !isEditable) {
         await webFullButton.click();
         addToolTip();
     }
