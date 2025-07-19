@@ -55,7 +55,15 @@ function init() {
 }
 
 async function keyboardPress(e) {
-    if (e.code === 'KeyN' && !e.altKey && !e.metaKey) {
+    const activeElement = document.activeElement;
+    const isEditable = (
+        activeElement.tagName === 'INPUT' ||
+        activeElement.tagName === 'TEXTAREA' ||
+        activeElement.tagName === 'SELECT' ||
+        activeElement.isContentEditable
+    );
+
+    if (e.code === 'KeyN' && !e.altKey && !e.metaKey && !isEditable) {
         await webFullButton.click();
         addToolTip();
     }
