@@ -6,11 +6,11 @@ ___
 #### 脚本列表(Scripts)
 | 脚本名称 |	适用网站 |	功能描述 |	最新版本|
 | :--- | :--- | :--- | :--- |
-| [__Bilibili Web Fullscreen Button HotKey__](#bilibili-web-fullscreen-button-hotkey) | `*://www.bilibili.com/video/*` | 添加N键为网页全屏快捷键 | v1.1 |
+| [**Bilibili Web Fullscreen Button HotKey**](#bilibili-web-fullscreen-button-hotkey) | `*://www.bilibili.com/video/*` | 添加N键为网页全屏快捷键 | v1.1 |
 
 ___
 
-#### Bilibili Web Fullscreen Button HotKey
+#### ___Bilibili Web Fullscreen Button HotKey___
 
  - 添加N键为网页全屏快捷键
  - 在网页全屏按钮的Tooltip上添加了本快捷键(n)提示
