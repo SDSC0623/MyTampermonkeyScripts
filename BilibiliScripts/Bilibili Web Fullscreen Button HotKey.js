@@ -6,8 +6,8 @@
 // @match        *://www.bilibili.com/video/*
 // @icon         https://i0.hdslb.com/bfs/static/jinkela/long/images/favicon.ico
 // @namespace    https://greasyfork.org/users/1496319
-// @downloadURL  https://update.greasyfork.org/scripts/543002/Bilibili%20Web%20Fullscreen%20Button%20HotKey.user.js
-// @updateURL    https://update.greasyfork.org/scripts/543002/Bilibili%20Web%20Fullscreen%20Button%20HotKey.meta.js
+// @downloadURL https://update.greasyfork.org/scripts/543002/Bilibili%20Web%20Fullscreen%20Button%20HotKey.user.js
+// @updateURL https://update.greasyfork.org/scripts/543002/Bilibili%20Web%20Fullscreen%20Button%20HotKey.meta.js
 // ==/UserScript==
 let webFullButton;
 let menuList;
@@ -60,10 +60,7 @@ function init() {
 async function keyboardPress(e) {
     const activeElement = document.activeElement;
     const isEditable = (
-        activeElement.tagName === 'INPUT' ||
-        activeElement.tagName === 'TEXTAREA' ||
-        activeElement.tagName === 'SELECT' ||
-        activeElement.isContentEditable
+        activeElement.tagName != 'BODY'
     );
 
     if (e.code === 'KeyB' && !e.ctrlKey && !e.altKey && !e.metaKey && !isEditable) {
