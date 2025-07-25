@@ -12,7 +12,7 @@ ___
 
 #### ___Bilibili Web Fullscreen Button HotKey___
 
- - 添加N键为网页全屏快捷键
+ - 添加 B 键为网页全屏快捷键
  - 在网页全屏按钮的Tooltip上添加了本快捷键(b)提示
  - 在右键的总快捷键菜单里，添加了本快捷键(b)功能描述
 
