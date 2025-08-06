@@ -7,26 +7,27 @@
 // @match        *://www.bilibili.com/bangumi/play/*
 // @icon         https://i0.hdslb.com/bfs/static/jinkela/long/images/favicon.ico
 // @namespace    https://greasyfork.org/users/1496319
-// @downloadURL  https://update.greasyfork.org/scripts/543002/Bilibili%20Web%20Fullscreen%20Button%20HotKey.user.js
-// @updateURL    https://update.greasyfork.org/scripts/543002/Bilibili%20Web%20Fullscreen%20Button%20HotKey.meta.js
+// @downloadURL https://update.greasyfork.org/scripts/543002/Bilibili%20Web%20Fullscreen%20Button%20HotKey.user.js
+// @updateURL https://update.greasyfork.org/scripts/543002/Bilibili%20Web%20Fullscreen%20Button%20HotKey.meta.js
 // ==/UserScript==
 let webFullButton;
 let menuList;
-(function () {
-    'use strict';
-    menuList = document.getElementsByClassName('bpx-player-video-wrap')[0];
-    menuList.addEventListener('mouseup', menuListener);
-    document.querySelector('video').addEventListener('progress', buttonListener);
-    document.addEventListener('keydown', keyboardPress, true);
-})();
-
-function buttonListener() {
+let time;
+let buttonListener = function () {
     webFullButton = document.getElementsByClassName('bpx-player-ctrl-web')[0];
-    if (webFullButton) {
-        document.querySelector('video').removeEventListener('progress', buttonListener);
+    menuList = document.getElementsByClassName('bpx-player-video-wrap')[0];
+    if (webFullButton && menuList) {
+        menuList.addEventListener('mouseup', menuListener);
+        clearInterval(time);
         init();
     }
-}
+};
+
+(function () {
+    'use strict';
+    time = setInterval(buttonListener, 100);
+    document.addEventListener('keydown', keyboardPress, true);
+})();
 
 function menuListener(e) {
     if (e.button === 2) {
