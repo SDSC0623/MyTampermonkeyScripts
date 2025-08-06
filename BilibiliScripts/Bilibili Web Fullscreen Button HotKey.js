@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Bilibili Web Fullscreen Button HotKey
-// @version      1.3
+// @version      1.4
 // @description  Add the ability to control the video in web fullscreen by pressing B key
 // @author       SDSC0623
 // @match        *://www.bilibili.com/video/*
